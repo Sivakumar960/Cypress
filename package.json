@@ -1,0 +1,21 @@
+{
+  "name": "cypressio",
+  "version": "1.0.0",
+  "description": "To automate using cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run --spec **/*.feature"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "axe-core": "^4.4.1",
+    "axe-html-reporter": "^2.2.3",
+    "cypress": "^9.5.0",
+    "cypress-axe": "^0.14.0",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}

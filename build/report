@@ -1,0 +1,91 @@
+[
+  {
+    "id": "aria-hidden-focus",
+    "impact": "serious",
+    "tags": [
+      "cat.name-role-value",
+      "wcag2a",
+      "wcag412",
+      "wcag131"
+    ],
+    "description": "Ensures aria-hidden elements do not contain focusable elements",
+    "nodes": 2
+  },
+  {
+    "id": "avoid-inline-spacing",
+    "impact": "serious",
+    "tags": [
+      "cat.structure",
+      "wcag21aa",
+      "wcag1412"
+    ],
+    "description": "Ensure that text spacing set through style attributes can be adjusted with custom stylesheets",
+    "nodes": 7
+  },
+  {
+    "id": "duplicate-id",
+    "impact": "minor",
+    "tags": [
+      "cat.parsing",
+      "wcag2a",
+      "wcag411"
+    ],
+    "description": "Ensures every id attribute value is unique",
+    "nodes": 1
+  },
+  {
+    "id": "image-redundant-alt",
+    "impact": "minor",
+    "tags": [
+      "cat.text-alternatives",
+      "best-practice"
+    ],
+    "description": "Ensure image alternative is not repeated as text",
+    "nodes": 48
+  },
+  {
+    "id": "label-title-only",
+    "impact": "serious",
+    "tags": [
+      "cat.forms",
+      "best-practice"
+    ],
+    "description": "Ensures that every form element has a visible label and is not solely labeled using hidden labels, or the title or aria-describedby attributes",
+    "nodes": 1
+  },
+  {
+    "id": "link-name",
+    "impact": "serious",
+    "tags": [
+      "cat.name-role-value",
+      "wcag2a",
+      "wcag412",
+      "wcag244",
+      "section508",
+      "section508.22.a",
+      "ACT"
+    ],
+    "description": "Ensures links have discernible text",
+    "nodes": 2
+  },
+  {
+    "id": "page-has-heading-one",
+    "impact": "moderate",
+    "tags": [
+      "cat.semantics",
+      "best-practice"
+    ],
+    "description": "Ensure that the page, or at least one of its frames contains a level-one heading",
+    "nodes": 1
+  },
+  {
+    "id": "region",
+    "impact": "moderate",
+    "tags": [
+      "cat.keyboard",
+      "best-practice"
+    ],
+    "description": "Ensures all page content is contained by landmarks",
+    "nodes": 7
+  }
+]

@@ -1,23 +1,30 @@
-import axe, { AxeResults } from 'axe-core'
-import {createHtmlReport} from 'axe-html-reporter'
 
+import axe from 'axe-core'
+//import 'attest-node'
 
 describe('Sample Test Suite',()=>{
+  before( function () {
+    cy.visit("https://www.amazon.in/")
+    cy.injectAxe();
+    
+});
     it('To test a sample application using Cypress IO',()=>{
-        cy.visit("https://www.amazon.in/")
-        cy.injectAxe()
-        
-        cy.checkA11y(null,{
-            includedImpacts: ['serious'],
-            runOnly: {
-                type: 'tag',
-                values: ['wcag2a']
-              }},terminallog,true)
-        function terminallog(violations) {
-           cy.writeFile("./build/report.json",violations)
+      cy.checkA11y(null,null,terminallog,true)
+        function terminallog(violations){
+            //cy.writeFile("./build/report.json",violations)
+            const violationData = violations.map(
+                ({ id, impact, tags,description, nodes }) => ({
+                  id,
+                  impact,
+                  tags,
+                  description,
+                  nodes: nodes.length,
+                })
+              )
+              
+              cy.writeFile("./build/report",violationData)
+            
         }
-
-        
-       
-   })
-})
+        })
+                         
+    })
